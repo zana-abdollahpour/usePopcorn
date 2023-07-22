@@ -38,7 +38,7 @@ function Search({ query, setQuery }) {
   const inputEl = useRef(null);
 
   useEffect(() => {
-    if (document.activeElement === inputEl) return;
+    if (document.activeElement === inputEl.current) return;
     const callback = (e) => {
       if (e.code === "Enter") {
         inputEl.current.focus();
